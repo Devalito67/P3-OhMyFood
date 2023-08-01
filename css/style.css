@@ -1,0 +1,42 @@
+/****** General ***********/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #FF79DA;
+    --filter-bg-color: #99E2D0;
+    --title-font: 'Shrikhand', cursive;
+    --text-font: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    box-sizing: border-box;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.logo-container {
+    height: 68px;
+    display:flex;
+    font-size: 0;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 36px;
+}
