@@ -5,6 +5,7 @@
     text-decoration: none;
     list-style: none;
     color: black;
+    font-family: var(--text-font);
 }
 
 :root {
@@ -17,26 +18,201 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     max-width: 1440px;
     min-width: 320px;
     box-sizing: border-box;
+
 }
 
-.header-container{
+.button-wrapper {
+    display: flex;
+    margin-top: 32px;
+}
+
+.button {
+    display: flex;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    height: 50px;
+    width: 186px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+/****** Header ***********/
+.header-container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
 }
 
 .logo-container {
-    height: 68px;
-    display:flex;
+    width: 100%;
+    height: 63px;
+    display: flex;
     font-size: 0;
     align-items: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    justify-content: space-around;
 }
 
 .logo-container img {
     height: 36px;
 }
+
+.my-location {
+    background-color: #EAEAEA;
+    height: 50px;
+    width: 100%;
+}
+
+/****** Main ***********/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F6F6;
+}
+
+.main-container h2 {
+    font-size: 24px;
+}
+
+/****** Service-infos ***********/
+.service-infos {
+    padding: 40px 30px 56px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.service-infos_title {
+    padding: 0 20px 10px;
+    display: flex;
+
+}
+
+.service-infos_content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/****** User-guide ***********/
+.user-guide {
+    padding: 48px 20px 68px;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+}
+
+.user-guide_title {
+    padding-bottom: 26px;
+}
+
+.user-guide_content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.user-guide_steps {
+    width: 335px;
+    position: relative;
+    display: flex;
+}
+
+.cercle {
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    top: calc(50% - 12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cercle p {
+    color: white;
+    font-size: 14px;
+}
+
+.steps-content {
+    height: 72px;
+    background-color: #F6F6F6;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-left: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.steps-content .fa-solid {
+    color: #7E7E7E;
+    margin-right: 20px;
+    margin-left: 34px;
+}
+
+.steps-content .fa-mobile-screen-button {
+    padding-right: 7.5px;
+}
+
+.steps-content .fa-list-ul {
+    padding-right: 2.5px;
+}
+
+.steps-content .fa-store {
+    color: var(--main-color);
+}
+
+/****** Restaurants-list ***********/
+.restaurants-list {
+    padding: 54px 20px 66px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.restaurants-card {
+    width: 340px;
+}
+
+.restaurants-card img {
+    object-fit: cover;
+    object-position: center;
+    height:174px;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+/****** Footer ***********/
+.footer-container {
+    display: flex;
+    background-color: #353535;
+    color: white;
+    padding: 22px 25px;
+}
+
+.footer-logo {
+    font-family: var(--title-font);
+    font-size: 18;
+}
+
+.footer-infos {}
