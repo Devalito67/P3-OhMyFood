@@ -36,7 +36,7 @@ body {
     display: flex;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     font-weight: 500;
     font-size: 16px;
@@ -116,7 +116,7 @@ body {
     padding: 48px 20px 68px;
     display: flex;
     flex-direction: column;
-    background-color:white;
+    background-color: white;
 }
 
 .user-guide_title {
@@ -187,32 +187,110 @@ body {
 .restaurants-list {
     padding: 54px 20px 66px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+}
+
+.restaurants-list_title {
+    margin-bottom: 19px;
+}
+
+.restaurants-list_content {
+    display: flex;
+    row-gap: 18px;
+    flex-direction: column;
 }
 
 .restaurants-card {
     width: 340px;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
 }
 
 .restaurants-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     object-fit: cover;
-    object-position: center;
-    height:174px;
+    object-position: bottom;
+    height: 174px;
     vertical-align: bottom;
     width: 100%;
+
+}
+
+.restaurants-card_content {
+    padding: 16px 25px 12px 13px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.restaurants-card_txt h3 {
+    font-size: 18px;
+    font-weight: 700;
+    height: 20px
+}
+
+.restaurants-card_txt p {
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 5px;
+    padding-bottom: 4px;
+}
+
+.fa-heart {
+    height: 22px;
+    width: 22px;
+}
+
+.heart-icon:hover .fa-heart {
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.new-button {
+    position: absolute;
+    border-radius: 2px;
+    background: var(--green, #99E2D0);
+    width: 80px;
+    height: 29px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    color : #008766;
+    border: none;
+    right: 12px;
+    top: 13px;
 }
 
 /****** Footer ***********/
 .footer-container {
     display: flex;
     background-color: #353535;
-    color: white;
     padding: 22px 25px;
+    flex-direction: column;
 }
 
-.footer-logo {
+.footer-logo p{
     font-family: var(--title-font);
-    font-size: 18;
+    font-size: 18px;
+    color: white;
 }
 
-.footer-infos {}
+.footer-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-infos a {
+    color: white;
+    font-size: 16px;
+}
+
+.footer-infos i {
+    color: white;
+}
+
+.footer-infos .fa-solid {
+    width: 22px;
+}
