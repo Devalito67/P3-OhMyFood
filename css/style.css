@@ -6,6 +6,7 @@
     list-style: none;
     color: black;
     font-family: var(--text-font);
+    box-sizing: border-box;
 }
 
 :root {
@@ -23,8 +24,6 @@ body {
     width: 100%;
     max-width: 1440px;
     min-width: 320px;
-    box-sizing: border-box;
-
 }
 
 .button-wrapper {
@@ -36,7 +35,7 @@ body {
     display: flex;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient(var(--main-bg-color), var(--main-color));
     color: white;
     font-weight: 500;
     font-size: 16px;
@@ -77,6 +76,17 @@ body {
     background-color: #EAEAEA;
     height: 50px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 17px;
+    align-items: center;
+justify-content: center;
+
+}
+
+.my-location p {
+    font-weight: 500;
+    font-size: 16px;
 }
 
 /****** Main ***********/
@@ -117,6 +127,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
+    width: 100%;
 }
 
 .user-guide_title {
@@ -130,9 +141,9 @@ body {
 }
 
 .user-guide_steps {
-    width: 335px;
     position: relative;
     display: flex;
+    width: 100%;
 }
 
 .cercle {
@@ -188,6 +199,7 @@ body {
     padding: 54px 20px 66px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .restaurants-list_title {
@@ -198,13 +210,15 @@ body {
     display: flex;
     row-gap: 18px;
     flex-direction: column;
+    align-items: center;
 }
 
 .restaurants-card {
-    width: 340px;
+    max-width: 490px;
     border-radius: 15px;
     background-color: white;
     position: relative;
+    width: 100%;
 }
 
 .restaurants-card img {
@@ -220,7 +234,7 @@ body {
 
 .restaurants-card_content {
     padding: 16px 25px 12px 13px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -238,16 +252,40 @@ body {
     padding-bottom: 4px;
 }
 
-.fa-heart {
-    height: 22px;
-    width: 22px;
+.heart-icon {
+    padding-top: 5px;
+    font-size: 21px;
 }
 
-.heart-icon:hover .fa-heart {
-    background: linear-gradient(#9356DC, #FF79DA);
+.heart-icon .strokeHeart {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    opacity: 1;
+}
+
+.heart-icon .fillHeart {
+    color: transparent;
+    background: linear-gradient(var(--main-color), var(--main-bg-color));
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    opacity: 0;
+}
+
+.heart-icon:hover .fillHeart,
+.heart-icon:hover .strokeHeart {
+    transition: opacity, 1s;
+}
+
+.heart-icon:hover .fillHeart {
+    opacity: 1;
+}
+
+.heart-icon:hover .strokeHeart {
+    opacity: 0;
+}
+
+.heart-icon .fa-solid {
+    color: transparent;
 }
 
 .new-button {
@@ -257,10 +295,13 @@ body {
     width: 80px;
     height: 29px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    color : #008766;
+    color: #008766;
     border: none;
     right: 12px;
     top: 13px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 7px;
 }
 
 /****** Footer ***********/
@@ -269,9 +310,10 @@ body {
     background-color: #353535;
     padding: 22px 25px;
     flex-direction: column;
+    row-gap: 16px;
 }
 
-.footer-logo p{
+.footer-logo p {
     font-family: var(--title-font);
     font-size: 18px;
     color: white;
@@ -280,6 +322,7 @@ body {
 .footer-infos {
     display: flex;
     flex-direction: column;
+    row-gap: 7px;
 }
 
 .footer-infos a {
