@@ -1,0 +1,250 @@
+/****** General ***********/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: var(--text-font);
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #FF79DA;
+    --filter-bg-color: #99E2D0;
+    --title-font: 'Shrikhand', cursive;
+    --text-font: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    display: flex;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(var(--main-bg-color), var(--main-color));
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    height: 50px;
+    width: 186px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+/****** Header ***********/
+.header-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.logo-container {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    font-size: 0;
+    align-items: baseline;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    padding: 14px 89px 13px;
+    justify-content: center;
+    column-gap: 42px;
+}
+
+.logo-container a{
+    height: 30px;
+    width: 30px;
+}
+
+.logo-container img {
+    height: 36px;
+}
+
+/****** Main ***********/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.main-container>img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.restaurant-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 13px 40px;
+    row-gap: 40px;
+    background-color: #f6f6f6;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 100%;
+    position: relative;
+    top: -55px;
+}
+
+.restaurant-title {
+    display: flex;
+    flex-direction: row;
+    height: 29px;
+    justify-content: space-between;
+}
+
+.restaurant-title h2 {
+    font-family: var(--title-font);
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.heart-icon {
+    margin-right: 24px;
+    font-size: 21px;
+    height: 21px;
+    width: 22px;
+}
+
+.heart-icon .strokeHeart {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    opacity: 1;
+}
+
+.heart-icon .fillHeart {
+    color: transparent;
+    background: linear-gradient(var(--main-color), var(--main-bg-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+}
+
+.heart-icon:hover .fillHeart,
+.heart-icon:hover .strokeHeart {
+    transition: opacity, 1s;
+}
+
+.heart-icon:hover .fillHeart {
+    opacity: 1;
+}
+
+.heart-icon:hover .strokeHeart {
+    opacity: 0;
+}
+
+.heart-icon .fa-solid {
+    color: transparent;
+}
+
+/****** Section ***********/
+.menu-style {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    width: 100%;
+}
+
+.menu-title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.menu-title h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.menu-title hr {
+    width: 40px;
+    border: none;
+    border-bottom: 3px solid var(--filter-bg-color);
+}
+
+.menu-card {
+    width: 100%;
+    row-gap: 5px;
+    flex-direction: column;
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.menu-card p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.menu-card h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu-card:hover .price {
+    transition: transform 0.8s;
+    transform: translateX(-59px);
+}
+
+.price {
+    font-weight: 700;
+}
+
+/****** Footer ***********/
+.footer-container {
+    display: flex;
+    background-color: #353535;
+    padding: 22px 25px;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.footer-logo p {
+    font-family: var(--title-font);
+    font-size: 18px;
+    color: white;
+}
+
+.footer-infos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+.footer-infos a {
+    color: white;
+    font-size: 16px;
+}
+
+.footer-infos i {
+    color: white;
+}
+
+.footer-infos .fa-solid {
+    width: 22px;
+}
