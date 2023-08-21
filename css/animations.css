@@ -1,0 +1,70 @@
+.content {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.first {
+    animation: moveblockleft 0.45s ease-out 1 both;
+    -webkit-animation: moveblockleft 0.45s ease-out 1 both;
+}
+
+.second {
+    animation: moveblock 0.3s ease-in 0.38s 1 both;
+    -webkit-animation: moveblock 0.3s ease-in 0.38s 1 both;
+}
+
+.third {
+    animation: moveblock 0.3s linear 0.67s 1 both;
+    -webkit-animation: moveblock 0.3s linear 0.67s 1 both;
+}
+
+.fourth {
+    animation: moveblock 0.3s ease-out 0.88s 1 both;
+    -webkit-animation: moveblock 0.3s ease-out 0.88s 1 both;
+}
+
+@keyframes moveblock {
+    0% {
+        transform: translateY(-87px);
+    }
+
+    100% {
+        transform: translateY(0px);
+
+        }
+    }
+
+
+@-webkit-keyframes moveblock {
+    0% {
+        -webkit-transform: translateY(-87px);
+
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+
+        }
+    }
+
+
+@keyframes moveblockleft {
+    0% {
+        transform: translateX(-280px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes moveblockleft {
+    0% {
+        -webkit-transform: translateX(-280px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0px);
+    }
+}
