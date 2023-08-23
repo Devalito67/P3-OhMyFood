@@ -220,14 +220,15 @@ body {
     flex-direction: column;
     row-gap: 5px;
     flex: 1;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .card-content p {
     font-size: 15px;
     font-weight: 300;
-    width: fit-content;
+text-overflow: ellipsis;
+white-space: nowrap;
+width: 300px;
+    overflow: hidden;
 }
 
 .card-content h4 {

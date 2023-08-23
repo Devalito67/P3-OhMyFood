@@ -24,6 +24,47 @@
     -webkit-animation: moveblock 0.3s ease-out 0.88s 1 both;
 }
 
+.first2 {
+    animation: moveblockleft 0.45s ease-out 1s 1 both;
+    -webkit-animation: moveblockleft 0.45s ease-out 1s 1 both;
+}
+
+.second2 {
+    animation: moveblock 0.3s ease-in 1.38s 1 both;
+    -webkit-animation: moveblock 0.3s ease-in 1.38s 1 both;
+}
+
+.third2 {
+    animation: moveblock 0.3s linear 1.67s 1 both;
+    -webkit-animation: moveblock 0.3s linear 1.67s 1 both;
+}
+
+.fourth2 {
+    animation: moveblock 0.3s ease-out 1.88s 1 both;
+    -webkit-animation: moveblock 0.3s ease-out 1.88s 1 both;
+}
+
+.first3 {
+    animation: moveblockleft 0.45s ease-out 2s 1 both;
+    -webkit-animation: moveblockleft 0.45s ease-out 2s 1 both;
+}
+
+.second3 {
+    animation: moveblock 0.3s ease-in 2.38s 1 both;
+    -webkit-animation: moveblock 0.3s ease-in 2.38s 1 both;
+}
+
+.third3 {
+    animation: moveblock 0.3s linear 2.67s 1 both;
+    -webkit-animation: moveblock 0.3s linear 2.67s 1 both;
+}
+
+.fourth3 {
+    animation: moveblock 0.3s ease-out 2.88s 1 both;
+    -webkit-animation: moveblock 0.3s ease-out 2.88s 1 both;
+}
+
+
 @keyframes moveblock {
     0% {
         transform: translateY(-87px);
@@ -51,7 +92,7 @@
 
 @keyframes moveblockleft {
     0% {
-        transform: translateX(-280px);
+        transform: translateX(-290px);
     }
 
     100% {
@@ -61,7 +102,7 @@
 
 @-webkit-keyframes moveblockleft {
     0% {
-        -webkit-transform: translateX(-280px);
+        -webkit-transform: translateX(-290px);
     }
 
     100% {
