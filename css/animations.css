@@ -1,111 +1,151 @@
-.content {
-    position: relative;
-    overflow: hidden;
+.menu-card_box {
+    animation: hiddenblock 0.1s ease 0.67s 1 forwards;
+    -webkit-animation: hiddenblock 0.1s ease 0.67s 1 forwards;
 }
 
-
 .first {
-    animation: moveblockleft 0.45s ease-out 1 both;
-    -webkit-animation: moveblockleft 0.45s ease-out 1 both;
+    animation: moveblockleft 0.45s ease-out 1 forwards;
+    -webkit-animation: moveblockleft 0.45s ease-out 1 forwards;
 }
 
 .second {
-    animation: moveblock 0.3s ease-in 0.38s 1 both;
-    -webkit-animation: moveblock 0.3s ease-in 0.38s 1 both;
+    animation: moveblock 0.3s ease-in 0.38s 1 forwards;
+    -webkit-animation: moveblock 0.3s ease-in 0.38s 1 forwards;
 }
 
 .third {
-    animation: moveblock 0.3s linear 0.67s 1 both;
-    -webkit-animation: moveblock 0.3s linear 0.67s 1 both;
+    animation: moveblock 0.3s linear 0.67s 1 forwards;
+    -webkit-animation: moveblock 0.3s linear 0.67s 1 forwards;
 }
 
 .fourth {
-    animation: moveblock 0.3s ease-out 0.88s 1 both;
-    -webkit-animation: moveblock 0.3s ease-out 0.88s 1 both;
+    animation: moveblock 0.3s ease-out 0.88s 1 forwards;
+    -webkit-animation: moveblock 0.3s ease-out 0.88s 1 forwards;
+}
+
+.fifth {
+    animation: moveblock 0.3s ease-out 1s 1 forwards;
+    -webkit-animation: moveblock 0.3s ease-out 1s 1 forwards;
+
+}
+
+.menu-card_box2 {
+    animation: hiddenblock 0.1s ease 1.67s 1 forwards;
+    -webkit-animation: hiddenblock 0.1s ease 1.67s 1 forwards;
 }
 
 .first2 {
-    animation: moveblockleft 0.45s ease-out 1s 1 both;
-    -webkit-animation: moveblockleft 0.45s ease-out 1s 1 both;
+    animation: moveblockleft 0.45s ease-out 1s 1 forwards;
+    -webkit-animation: moveblockleft 0.45s ease-out 1s 1 forwards;
 }
 
 .second2 {
-    animation: moveblock 0.3s ease-in 1.38s 1 both;
-    -webkit-animation: moveblock 0.3s ease-in 1.38s 1 both;
+    animation: moveblock 0.3s ease-in 1.38s 1 forwards;
+    -webkit-animation: moveblock 0.3s ease-in 1.38s 1 forwards;
 }
 
 .third2 {
-    animation: moveblock 0.3s linear 1.67s 1 both;
-    -webkit-animation: moveblock 0.3s linear 1.67s 1 both;
+    animation: moveblock 0.3s linear 1.67s 1 forwards;
+    -webkit-animation: moveblock 0.3s linear 1.67s 1 forwards;
 }
 
 .fourth2 {
-    animation: moveblock 0.3s ease-out 1.88s 1 both;
-    -webkit-animation: moveblock 0.3s ease-out 1.88s 1 both;
+    animation: moveblock 0.3s ease-out 1.88s 1 forwards;
+    -webkit-animation: moveblock 0.3s ease-out 1.88s 1 forwards;
+}
+
+.menu-card_box3 {
+    animation: hiddenblock 0.1s ease 2.67s 1 forwards;
+    -webkit-animation: hiddenblock 0.1s ease 2.67s 1 forwards;
 }
 
 .first3 {
-    animation: moveblockleft 0.45s ease-out 2s 1 both;
-    -webkit-animation: moveblockleft 0.45s ease-out 2s 1 both;
+    animation: moveblockleft 0.45s ease-out 2s 1 forwards;
+    -webkit-animation: moveblockleft 0.45s ease-out 2s 1 forwards;
 }
 
 .second3 {
-    animation: moveblock 0.3s ease-in 2.38s 1 both;
-    -webkit-animation: moveblock 0.3s ease-in 2.38s 1 both;
+    animation: moveblock 0.3s ease-in 2.38s 1 forwards;
+    -webkit-animation: moveblock 0.3s ease-in 2.38s 1 forwards;
 }
 
 .third3 {
-    animation: moveblock 0.3s linear 2.67s 1 both;
-    -webkit-animation: moveblock 0.3s linear 2.67s 1 both;
+    animation: moveblock 0.3s linear 2.67s 1 forwards;
+    -webkit-animation: moveblock 0.3s linear 2.67s 1 forwards;
 }
 
 .fourth3 {
-    animation: moveblock 0.3s ease-out 2.88s 1 both;
-    -webkit-animation: moveblock 0.3s ease-out 2.88s 1 both;
+    animation: moveblock 0.3s ease-out 2.88s 1 forwards;
+    -webkit-animation: moveblock 0.3s ease-out 2.88s 1 forwards;
 }
 
 
 @keyframes moveblock {
     0% {
         transform: translateY(-87px);
+        opacity: 1;
     }
 
     100% {
         transform: translateY(0px);
-
-        }
+        opacity: 1;
     }
+}
 
 
 @-webkit-keyframes moveblock {
     0% {
         -webkit-transform: translateY(-87px);
-
+        opacity: 1;
     }
 
     100% {
         -webkit-transform: translateY(0px);
-
-        }
+        opacity: 1;
     }
+}
 
 
 @keyframes moveblockleft {
     0% {
         transform: translateX(-290px);
+        opacity: 1;
     }
 
     100% {
         transform: translateX(0px);
+        opacity: 1;
     }
 }
 
 @-webkit-keyframes moveblockleft {
     0% {
         -webkit-transform: translateX(-290px);
+        opacity: 1;
     }
 
     100% {
         -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes hiddenblock {
+    0% {
+        overflow: visible;
+    }
+
+    100% {
+        overflow: visible;
+    }
+}
+
+@-webkit-keyframes hiddenblock {
+    0% {
+        overflow: visible;
+    }
+
+    100% {
+        overflow: visible;
     }
 }

@@ -25,6 +25,7 @@ body {
     max-width: 1440px;
     min-width: 320px;
     margin: 0 auto;
+    background-color: white;
 }
 
 .button-wrapper {
@@ -287,6 +288,7 @@ body {
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
     opacity: 1;
+    transition-duration: 0.8s;
 }
 
 .heart-icon .fillHeart {
@@ -295,11 +297,12 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     opacity: 0;
+    transition-duration: 0.8s;
 }
 
 .heart-icon:hover .fillHeart,
 .heart-icon:hover .strokeHeart {
-    transition: opacity, 1s;
+    transition: opacity, 0.8s;
 }
 
 .heart-icon:hover .fillHeart {
