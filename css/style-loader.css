@@ -1,27 +1,31 @@
 .loader {
     background-color: #99e2d0;
     height: 100%;
-    line-height: 100vh;
     width: 100%;
     z-index: 1000;
     animation: opacity 0.1s linear 3s 1 forwards;
     -webkit-animation: opacity 0.1s linear 3s 1 forwards;
-    text-align: center;
     position: fixed;
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     top: 0;
-    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.loader-logo {
+    font-size: 50px;
+    font-family: 'Shrikhand', sans-serif;
 }
 
 
 .loader-food {
     width: 60px;
     height: 60px;
-    display: inline-block;
-    vertical-align: middle;
     position: relative;
+    margin:30px;
 }
 
 .loader-food::after {
@@ -35,7 +39,7 @@
     border: 6px solid rgba(255, 255, 2555, 0.4);
     border-top-color: white;
     animation: spin 1s linear 3;
-    -webkit-animation: spin 1s linear 3; 
+    -webkit-animation: spin 1s linear 3;
 }
 
 .icon {
@@ -93,22 +97,22 @@
 
 @keyframes opacity {
     0% {
-        opacity:1;
+        opacity: 1;
     }
 
     100% {
-        opacity:0;
+        opacity: 0;
         z-index: 0;
     }
 }
 
 @-webkit-keyframes opacity {
     0% {
-        opacity:1;
+        opacity: 1;
     }
 
     100% {
-        opacity:0;
+        opacity: 0;
         z-index: 0;
     }
 }
