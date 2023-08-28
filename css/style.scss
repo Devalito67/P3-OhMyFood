@@ -1,0 +1,470 @@
+$main-color: #9356DC;
+$main-bg-color: #FF79DA;
+$filter-bg-color: #99E2D0;
+$title-font: 'Shrikhand', cursive;
+$text-font: 'Roboto', sans-serif;
+
+/****** General ***********/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: $text-font;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.button-wrapper {
+    display: flex;
+    margin-top: 32px;
+}
+
+.button {
+    display: flex;
+    height: 50px;
+    width: 186px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient($main-bg-color, $main-color);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+
+    &:hover {
+        opacity: 0.85;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/****** Header ***********/
+.header-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    padding: 14px 89px 13px;
+}
+
+.logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 19px;
+    height: 36px;
+
+    & h1 {
+        font-size: 30px;
+        font-family: $title-font;
+        font-weight: 400;
+    }
+}
+
+/****** Main ***********/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F6F6;
+
+    & h2 {
+        font-size: 24px;
+    }
+}
+
+/****** Location ***********/
+.my-location {
+    background-color: #EAEAEA;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 17px;
+    align-items: center;
+    justify-content: center;
+
+    & p {
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+/****** Service-infos ***********/
+.service-infos {
+    padding: 40px 30px 56px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &_title {
+        padding: 0 20px 10px;
+        display: flex;
+
+    }
+
+    &_content p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.mobile {
+    display: inherit;
+}
+
+.desktop {
+    display: none;
+    width: 218px;
+}
+
+/****** User-guide ***********/
+.user-guide {
+    padding: 48px 20px 68px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    row-gap: 25px;
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+    }
+
+    &_steps {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex: 1;
+        max-width: 490px;
+    }
+}
+
+.cercle {
+    position: absolute;
+    background-color: $main-color;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    top: calc(50% - 12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        color: white;
+        font-size: 14px;
+    }
+}
+
+.steps-content {
+    background-color: #F6F6F6;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 38px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 72px;
+    margin-left: 12px;
+
+    & i {
+        height: 20px;
+        width: 18px;
+        text-align: center;
+        margin-right: 17px;
+    }
+
+    & .fa-solid {
+        color: #7E7E7E;
+    }
+
+    & .fa-mobile-screen-button {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    & .fa-list-ul {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    & .fa-store {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    &:hover i {
+        color: $main-color;
+    }
+}
+
+/****** Restaurants-list ***********/
+.restaurants-list {
+    padding: 54px 20px 66px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 19px;
+
+    &_content {
+        display: flex;
+        row-gap: 18px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.restaurants-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    flex: 100%;
+    width: 100%;
+    max-width: 490px;
+
+    & img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        object-fit: cover;
+        object-position: bottom;
+        height: 174px;
+        vertical-align: bottom;
+        width: 100%;
+    }
+
+    &_content {
+        padding: 16px 25px 12px 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &_txt h3 {
+        font-size: 18px;
+        font-weight: 700;
+        height: 20px
+    }
+
+    &_txt p {
+        font-size: 17px;
+        font-weight: 300;
+        margin-top: 5px;
+        padding-bottom: 4px;
+    }
+}
+
+.heart-icon {
+    padding-top: 5px;
+    font-size: 21px;
+
+    & .strokeHeart {
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1px;
+        opacity: 1;
+        transition-duration: 0.8s;
+    }
+
+    & .fillHeart {
+        color: transparent;
+        background: linear-gradient($main-color, $main-bg-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        opacity: 0;
+        transition-duration: 0.8s;
+    }
+
+    &:hover .fillHeart,
+    &:hover .strokeHeart {
+        transition: opacity, 0.8s;
+    }
+
+    &:hover .fillHeart {
+        opacity: 1;
+    }
+
+    &:hover .strokeHeart {
+        opacity: 0;
+    }
+
+    & .fa-solid {
+        color: transparent;
+    }
+}
+
+.new-button {
+    position: absolute;
+    border-radius: 2px;
+    background: var(--green, #99E2D0);
+    width: 80px;
+    height: 29px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    color: #008766;
+    border: none;
+    right: 12px;
+    top: 13px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 7px;
+}
+
+/****** Footer ***********/
+.footer-container {
+    display: flex;
+    background-color: #353535;
+    padding: 22px 25px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-logo p {
+    font-family: $title-font;
+    font-size: 18px;
+    color: white;
+}
+
+.footer-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    & ul {
+        display: flex;
+        gap: 7px;
+        flex-direction: column;
+    }
+
+    & a {
+        display: flex;
+        font-size: 16px;
+        color: white;
+        align-items: center;
+    }
+
+    & .fa-solid {
+        width: 22px;
+        color: white;
+    }
+}
+
+.footer-link {
+    width: 130px;
+    font-weight: 400;
+
+    &_icon {
+        width: 190px;
+        font-weight: 500;
+    }
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, more than 768px) */
+@media (min-width: 768px) {
+
+    /****** Footer ***********/
+    .footer-infos {
+        flex-direction: row;
+    }
+}
+
+/* Large devices (desktop, more than 1024px) */
+@media (min-width: 1024px) {
+
+    /****** Header ***********/
+    .header-container {
+        padding-top: 30px;
+        padding-bottom: 32px;
+    }
+
+    .logo-container {
+        align-items: center;
+
+        & h1 {
+            font-size: 34px;
+        }
+    }
+
+    /****** Main ***********/
+    .main-container {
+        row-gap: 30px;
+    }
+
+    /****** Service-infos ***********/
+    .service-infos {
+        padding: 0;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: inherit;
+    }
+
+    /****** Restaurants-list ***********/
+    .restaurants-list {
+        padding: 0 180px 30px;
+        row-gap: 28px;
+
+        &_content {
+            row-gap: 50px;
+            column-gap: 100px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    .restaurants-card {
+        flex-basis: calc(50% - 100px);
+    }
+
+    /****** User-guide ***********/
+    .user-guide {
+        padding: 50px 180px;
+        column-gap: 25px;
+
+        &_content {
+            flex-direction: row;
+            column-gap: 24px;
+        }
+    }
+
+    /****** Footer ***********/
+    .footer-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        flex-direction: row-reverse;
+        gap: 16px;
+        align-items: flex-end;
+        height: 114px;
+    }
+
+    .footer-infos ul {
+        flex-direction: row;
+    }
+}

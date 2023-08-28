@@ -1,0 +1,79 @@
+$menu-card-box-delay: 0.67s;
+$anim-moveblockdown-duration: 0.3s;
+$anim-moveblockleft-duration: 0.45s;
+$moveblockleft-delay: 1s;
+$moveblock-duration: 0s;
+$hiddenblock-duration: 0.1s;
+
+@keyframes moveblock-down {
+  0% {
+    transform: translateY(-87px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveblock-left {
+  0% {
+    transform: translateX(-290px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes hiddenblock {
+  0% {
+    overflow: visible;
+  }
+
+  100% {
+    overflow: visible;
+  }
+}
+
+@for $i from 1 through 3 {
+  $delay: $menu-card-box-delay + ($i - 1);
+  $moveblockleft-delay: ($i - 1s);
+  $moveblock-duration: ($i - 1s);
+
+
+  .menu-card_box#{$i} {
+    animation: hiddenblock $hiddenblock-duration ease $delay 1 forwards;
+    -webkit-animation: hiddenblock $hiddenblock-duration ease $delay 1 forwards;
+  }
+
+  .left#{$i} {
+    animation: moveblock-left $anim-moveblockleft-duration ease-out $moveblockleft-delay 1 forwards;
+    -webkit-animation: moveblock-left $anim-moveblockleft-duration ease-out $moveblockleft-delay 1 forwards;
+  }
+
+  .first#{$i} {
+    animation: moveblock-down $anim-moveblockdown-duration ease-in $moveblock-duration + 0.38 1 forwards;
+    -webkit-animation: moveblock-down $anim-moveblockdown-duration ease-in $moveblock-duration + 0.38 1 forwards;
+  }
+
+  .second#{$i} {
+    animation: moveblock-down $anim-moveblockdown-duration linear $moveblock-duration + 0.67 1 forwards;
+    -webkit-animation: moveblock-down $anim-moveblockdown-duration linear $moveblock-duration + 0.67 1 forwards;
+  }
+
+  .third#{$i} {
+    animation: moveblock-down $anim-moveblockdown-duration ease-out $moveblock-duration + 0.88 1 forwards;
+    -webkit-animation: moveblock-down $anim-moveblockdown-duration ease-out $moveblock-duration + 0.88 1 forwards;
+  }
+
+  .fourth#{$i} {
+    animation: moveblock-down $anim-moveblockdown-duration ease-out $moveblock-duration + 1 1 forwards;
+    -webkit-animation: moveblock-down $anim-moveblockdown-duration ease-out $moveblock-duration + 1 1 forwards;
+  }
+
+
+}
