@@ -45,6 +45,7 @@ body {
     width: 186px;
     justify-content: center;
     align-items: center;
+    z-index: 30;
 }
 
 .button:hover {

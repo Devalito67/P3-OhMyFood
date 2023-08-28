@@ -103,7 +103,7 @@ body {
     height: 275px;
     width: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 
 .restaurant-menu {
@@ -350,6 +350,7 @@ body {
 
     .logo-container {
         align-items: center;
+        height: 34px;
     }
 
     .logo-container h1 {
@@ -357,7 +358,13 @@ body {
     }
 
     /****** Main ***********/
+    .main-container>img {
+        height: 383px;
+    }
 
+    .restaurant-menu {
+        margin-top: -40px;
+    }
 
     /****** Footer ***********/
     .footer-container {
