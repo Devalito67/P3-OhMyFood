@@ -1,0 +1,117 @@
+@keyframes moveblock-down {
+  0% {
+    transform: translateY(-87px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveblock-left {
+  0% {
+    transform: translateX(-290px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes hiddenblock {
+  0% {
+    overflow: visible;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+.menu-card_box1 {
+  animation: hiddenblock 0.1s ease 0.67s 1 forwards;
+  -webkit-animation: hiddenblock 0.1s ease 0.67s 1 forwards;
+}
+
+.left1 {
+  animation: moveblock-left 0.45s ease-out 0s 1 forwards;
+  -webkit-animation: moveblock-left 0.45s ease-out 0s 1 forwards;
+}
+
+.first1 {
+  animation: moveblock-down 0.3s ease-in 0.38s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-in 0.38s 1 forwards;
+}
+
+.second1 {
+  animation: moveblock-down 0.3s linear 0.67s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s linear 0.67s 1 forwards;
+}
+
+.third1 {
+  animation: moveblock-down 0.3s ease-out 0.88s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-out 0.88s 1 forwards;
+}
+
+.fourth1 {
+  animation: moveblock-down 0.3s ease-out 1s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-out 1s 1 forwards;
+}
+
+.menu-card_box2 {
+  animation: hiddenblock 0.1s ease 1.67s 1 forwards;
+  -webkit-animation: hiddenblock 0.1s ease 1.67s 1 forwards;
+}
+
+.left2 {
+  animation: moveblock-left 0.45s ease-out 1s 1 forwards;
+  -webkit-animation: moveblock-left 0.45s ease-out 1s 1 forwards;
+}
+
+.first2 {
+  animation: moveblock-down 0.3s ease-in 1.38s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-in 1.38s 1 forwards;
+}
+
+.second2 {
+  animation: moveblock-down 0.3s linear 1.67s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s linear 1.67s 1 forwards;
+}
+
+.third2 {
+  animation: moveblock-down 0.3s ease-out 1.88s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-out 1.88s 1 forwards;
+}
+
+.fourth2 {
+  animation: moveblock-down 0.3s ease-out 2s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-out 2s 1 forwards;
+}
+
+.menu-card_box3 {
+  animation: hiddenblock 0.1s ease 2.67s 1 forwards;
+  -webkit-animation: hiddenblock 0.1s ease 2.67s 1 forwards;
+}
+
+.left3 {
+  animation: moveblock-left 0.45s ease-out 2s 1 forwards;
+  -webkit-animation: moveblock-left 0.45s ease-out 2s 1 forwards;
+}
+
+.first3 {
+  animation: moveblock-down 0.3s ease-in 2.38s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-in 2.38s 1 forwards;
+}
+
+.second3 {
+  animation: moveblock-down 0.3s linear 2.67s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s linear 2.67s 1 forwards;
+}
+
+.third3 {
+  animation: moveblock-down 0.3s ease-out 2.88s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-out 2.88s 1 forwards;
+}
+
+.fourth3 {
+  animation: moveblock-down 0.3s ease-out 3s 1 forwards;
+  -webkit-animation: moveblock-down 0.3s ease-out 3s 1 forwards;
+}/*# sourceMappingURL=animation.css.map */
